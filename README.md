@@ -31,7 +31,7 @@ Accurate SOC estimation is critical for battery safety and performance. This wor
 - **Ohmic Resistance $R_0(SOC,T)$:** Arrhenius-scaled polynomial.  
 - **Polarization RC Network:** $R_1(SOC,T)$ and $C_1(SOC,T)$ for transient dynamics.  
 - **State Equations:**  
-  $ \dot{SOC} = -\frac{I}{Q_{nom}}, \quad \dot{U}_1 = -\frac{1}{R_1 C_1} U_1 + \frac{1}{C_1} I $ 
+  $\dot{SOC} = -\frac{I}{Q_{nom}}, \quad \dot{U}_1 = -\frac{1}{R_1 C_1} U_1 + \frac{1}{C_1} I$ 
 - **Output Equation:**  
   $U_t = U_{OCV}(SOC) - I R_0 - U_1$
 
