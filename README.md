@@ -36,7 +36,7 @@ By using lookup tables rather than closed-form fits, the model automatically int
 The equivalent circuit is a 1-RC Thevenin model per cell, replicated for a 4-cell series pack. Each cell’s terminal voltage is:  
 $$U_{t,i} = U_{OCV,i}(SOC_i, T) - I \\cdot R_0(SOC_i, T) - U_{1,i},$$  
 with dynamics:  
-$$\dot{SOC}_i = -\frac{I}{Q_{nom}}, \quad \dot{U}_{1,i} = -\frac{1}{R_1(SOC_i,T) C_1(SOC_i,T)} U_{1,i} + \frac{1}{C_1(SOC_i,T)} I$$  
+$\dot{SOC}_i = -\frac{I}{Q_{nom}}, \quad \dot{U}_{1,i} = -\frac{1}{R_1(SOC_i,T) C_1(SOC_i,T)} U_{1,i} + \frac{1}{C_1(SOC_i,T)} I$ 
 ### 2.2 Parameter Table Generation  
 - **Data Sources:** Use HPPC test data or manufacturer curves to populate tables.  
 - **Script:** `generate_lookup_tables.m` reads raw test data and outputs 2-D tables (SOC × Temperature) for OCV, $R_0$, $R_1$, $C_1$.  
