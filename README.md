@@ -1,25 +1,23 @@
 # README.md
 
-**Title:** State-of-Charge Estimation for 4-Cell Li-Ion Battery Using Simscape Lookup Tables and EKF  
-**Authors:** [Your Name]  
-**Date:** [Date]  
+State-of-Charge Estimation for One Cell Battery Using Simscape Lookup Tables and EKF  
 
 ---
 
 ## Abstract  
-This repository implements a first-order equivalent circuit model of a 4-cell Li-ion battery pack using lookup tables for all electrochemical parameters (OCV, $R_0$, $R_1$, $C_1$) as demonstrated in the MathWorks example. An Extended Kalman Filter (EKF) is designed for real-time state-of-charge (SOC) estimation. The project includes:
+This repository implements a first-order equivalent circuit model of a one cell battery pack using lookup tables for all electrochemical parameters (OCV, $R_0$, $R_1$, $C_1$) as demonstrated in the MathWorks example. An Extended Kalman Filter (EKF) is designed for real-time state-of-charge (SOC) estimation. The project includes:
 
 - Table-based parameterization following the *Estimate Battery SOC Using Kalman Filter* example (MathWorks).  
 - Simulink and MATLAB scripts for lookup-table generation and EKF implementation.  
 - Simulation results and guidance for embedded deployment.
 
 ## Keywords  
-Li-ion, Battery, Equivalent Circuit, Lookup Table, Kalman Filter, SOC Estimation, Simulink, Embedded
+Battery, Equivalent Circuit, Lookup Table, Kalman Filter, SOC Estimation, Simulink, Embedded
 
 ---
 
 ## 1. Introduction  
-Reliable SOC estimation ensures safe and efficient battery operation. MathWorks provides a standard workflow using Simscape’s table-based battery model with lookup tables for temperature- and SOC-dependent parameters, paired with an EKF for SOC estimation. This repository adapts that workflow to a 4-cell pack.
+Reliable SOC estimation ensures safe and efficient battery operation. MathWorks provides a standard workflow using Simscape’s table-based battery model with lookup tables for temperature- and SOC-dependent parameters, paired with an EKF for SOC estimation. This repository adapts that workflow to a one cell pack.
 
 ---
 
@@ -33,7 +31,7 @@ This project uses the **Simscape Battery (Table-Based)** block configured with t
 
 By using lookup tables rather than closed-form fits, the model automatically interpolates values for intermediate SOC or temperature conditions, matching the approach in the MathWorks example.
 
-The equivalent circuit is a 1-RC Thevenin model per cell, replicated for a 4-cell series pack. Each cell’s terminal voltage is:  
+The equivalent circuit is a 1-RC Thevenin model per cell, replicated for a one cell series pack. Each cell’s terminal voltage is:  
 ```math
 U_{t,i} = U_{OCV,i}(SOC_i, T) - I \cdot R_0(SOC_i, T) - U_{1,i},
 ``` 
@@ -97,7 +95,7 @@ Use the **Extended Kalman Filter** block from the Control System Toolbox. Specif
 ---
 
 ## 7. Conclusion  
-This repository demonstrates the MathWorks recommended approach—using table-based parameterization and an EKF block—for robust SOC estimation in a multi-cell Li-ion pack.
+This repository demonstrates the MathWorks recommended approach—using table-based parameterization and an EKF block—for robust SOC estimation in a multi-cell  pack.
 
 ---
 
