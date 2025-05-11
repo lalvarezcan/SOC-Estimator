@@ -27,7 +27,7 @@ Accurate SOC estimation is critical for battery safety and performance. This wor
 
 ## 2. Equivalent Circuit Modeling
 ### 2.1 Model Structure
-- **Open-Circuit Voltage (OCV)**: \(U_{OCV}(SOC)\) via polynomial or lookup table.
+- **Open-Circuit Voltage (OCV)**: $U_{OCV}(SOC)$ via polynomial or lookup table.
 - **Ohmic Resistance \(R_0(SOC,T)\)**: Arrhenius-scaled polynomial.
 - **Polarization RC Network**: \(R_1(SOC,T)\) and \(C_1(SOC,T)\) for transient dynamics.
 - **State Equations**:
