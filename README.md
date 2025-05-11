@@ -34,7 +34,9 @@ This project uses the **Simscape Battery (Table-Based)** block configured with t
 By using lookup tables rather than closed-form fits, the model automatically interpolates values for intermediate SOC or temperature conditions, matching the approach in the MathWorks example.
 
 The equivalent circuit is a 1-RC Thevenin model per cell, replicated for a 4-cell series pack. Each cell’s terminal voltage is:  
-$$U_{t,i} = U_{OCV,i}(SOC_i, T) - I \\cdot R_0(SOC_i, T) - U_{1,i},$$  
+```math
+U_{t,i} = U_{OCV,i}(SOC_i, T) - I \\cdot R_0(SOC_i, T) - U_{1,i},
+``` 
 with dynamics:  
 ```math
 \dot{SOC}_i = -\frac{I}{Q_{nom}}, \quad \dot{U}_{1,i} = -\frac{1}{R_1(SOC_i,T) C_1(SOC_i,T)} U_{1,i} + \frac{1}{C_1(SOC_i,T)} I
