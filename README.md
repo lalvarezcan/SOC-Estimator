@@ -35,7 +35,7 @@ By using lookup tables rather than closed-form fits, the model automatically int
 
 The equivalent circuit is a 1-RC Thevenin model per cell, replicated for a 4-cell series pack. Each cell’s terminal voltage is:  
 ```math
-U_{t,i} = U_{OCV,i}(SOC_i, T) - I \\cdot R_0(SOC_i, T) - U_{1,i},
+U_{t,i} = U_{OCV,i}(SOC_i, T) - I \cdot R_0(SOC_i, T) - U_{1,i},
 ``` 
 with dynamics:  
 ```math
